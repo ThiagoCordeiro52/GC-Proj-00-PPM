@@ -41,7 +41,7 @@ full green + full red + 20% blue.
 The expected result is the image below.
 
  <!-- <img src="./pics/cameras.png" width="650"> -->
- ![PPM expected result.](./pics/result.png.png)
+ ![PPM expected result.](./pics/result.png)
 
 ### The PPM image format
 
