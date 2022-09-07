@@ -83,7 +83,7 @@ In this case $`P(t)`$  is a function that takes a real value $`t`$ and returns a
 
 Note, for instance, that when $`t = 0`$ we have 100% of _"influence"_ of the value $`A`$ and 0% of "influence" of the value $`B`$. Similarly, when $`t = 1`$, we have 0% of $`A`$ and 100% of $`B`$. This is a linear interpolation between those two values!
 
-To apply this concept to colors you need to interpolate each RGB channel separately. However, this will only work for ine dimension. To get a interpolated color inside the **image plane** we need to interpolate twice, which is called [**bilinear interpolation**](https://en.wikipedia.org/wiki/Bilinear_interpolation).
+To apply this concept to colors you need to interpolate each RGB channel separately. However, this will only work for one dimension. To generate an interpolated color inside the **image plane** we need to interpolate twice, which is called [**bilinear interpolation**](https://en.wikipedia.org/wiki/Bilinear_interpolation).
 
 Suppose we need to find a interpolated color for a coordinate $`(u,v)`$ with $`u,v \in [0,1]`$.
 Now assume that $`A`$ and $`B`$ are the colors assigned to the bottom left, and bottom right corners of the image, respectively.
