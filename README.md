@@ -73,7 +73,7 @@ P3           # "P3" means this is a RGB color image in ASCII
 ## Part 2: Linear interpolation
 
 In the previous part, you had to generate a image based on a **fixed** interpolation strategy, with predefined values for each of the color channels.
-In this segment, we need to _generalize_ this task by allowing the client (i.e. the scene file) to specify a different color for each of the four corners of the image. The, we calculate the internal color of the image by performing a **linear interpolation** in each of the image dimensions.
+In this segment, we need to _generalize_ this task by allowing the client (i.e. the scene file) to specify a different color for each of the four corners of the image. Then, we calculate the internal color of the image by performing a **linear interpolation** in each of the image dimensions.
 
 A parametric line between two points `A` and `B` represents a _weighted average_ between those two points.
 
