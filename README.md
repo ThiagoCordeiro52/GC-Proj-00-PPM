@@ -50,7 +50,7 @@ The basic PPM image format has the following **header**:
 1. One line with the so called _magic number_, which is an indication of the type of image. For PPM images in ASCII mode this magic number is `P3`.
 2. One line with two integer values, indicating the **width** (`W`) and **height** (`H`) of the image in pixels.
 3. One line with the maximum value for a color, `MAX`. This is usually `255`.
-4. Then we have `W` `$\times$` `H` lines, each with three integer values (R, G, and B), varying from 0 to `MAX`. These lines are the _"body"_ of the image.
+4. Then we have `W` $`\times`$ `H` lines, each with three integer values (R, G, and B), varying from 0 to `MAX`. These lines are the _"body"_ of the image.
 
 Of course, you do not need to place each of these information on a separate line, if you do not wish so. The only requirement is that these values should be separated with at least on white space. So technically, you could have all the image in a single line!
 
