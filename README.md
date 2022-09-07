@@ -101,7 +101,7 @@ The bilinear interpolation works as follows:
 
 Adapt the program developed in the Part 1 of this assignment so that
 
-1. You now instantiate a `Background` object `bkg`, assigning to it 4 RGB colors to each of its corners, and;
+1. You now instantiate a `Background` object `bkg`, assigning four RGB colors to each of its corners, and;
 2. Generate a new PPM image by _sampling_ each pixel of the image via methods of the `bkg` object.
 
 Recall that the main purpose of the `Background` class is to _hide_ the bilinear interpolation described previously.
