@@ -47,7 +47,7 @@ The expected result is the image below.
 
 The basic PPM image format has the following **header**:
 
-1. One line with the so called _magic number_, which is an indication of the type of image. For PPM images in ASCII mode this magic number is `P6`.
+1. One line with the so called _magic number_, which is an indication of the type of image. For PPM images in ASCII mode this magic number is `P3`.
 2. One line with two integer values, indicating the **width** (`W`) and **height** (`H`) of the image in pixels.
 3. One line with the maximum value for a color, `MAX`. This is usually `255`.
 4. Then we have `H` lines, each with `W` triplets of integer values varying from 0 to `MAX`. These lines are the _"body"_ of the image.
