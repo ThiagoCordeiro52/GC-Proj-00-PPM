@@ -41,7 +41,8 @@ full green + full red + 20% blue.
 The expected result is the image below.
 
  <!-- <img src="./pics/cameras.png" width="650"> -->
- ![PPM expected result.](./pics/result.png)
+
+![PPM expected result.](./pics/result.png)
 
 ### The PPM image format
 
@@ -54,7 +55,7 @@ The basic PPM image format has the following **header**:
 
 Of course, you do not need to place each of these information on a separate line, if you do not wish so. The only requirement is that these values should be separated with at least on white space. So technically, you could have all the image in a single line!
 
-However, it's recommended that your program generate one information per line to make the file more _human readable_ and, therefore, easy to debug. In the particular case of the pixels, you may print one pixel color (a RGB triplet) per line. See the PPM file example  below, copied from the [wikipedia](https://en.wikipedia.org/wiki/Netpbm).
+However, it's recommended that your program generate one information per line to make the file more _human readable_ and, therefore, easy to debug. In the particular case of the pixels, you may print one pixel color (a RGB triplet) per line. See the PPM file example below, copied from the [wikipedia](https://en.wikipedia.org/wiki/Netpbm).
 
 ```
 P3           # "P3" means this is a RGB color image in ASCII
@@ -79,7 +80,7 @@ A parametric line between two points `A` and `B` represents a _weighted average_
 
 $`P(t) = (1-t)A + tB`$
 
-In this case $`P(t)`$  is a function that takes a real value $`t`$ and returns a location along the infinite line that connects $`A`$ to $`B`$. However, if we restrict the parameter to be $`t \in [0,1]`$, this function will only output values between those two points.
+In this case $`P(t)`$ is a function that takes a real value $`t`$ and returns a location along the infinite line that connects $`A`$ to $`B`$. However, if we restrict the parameter to be $`t \in [0,1]`$, this function will only output values between those two points.
 
 Note, for instance, that when $`t = 0`$ we have 100% of _"influence"_ of the value $`A`$ and 0% of "influence" of the value $`B`$. Similarly, when $`t = 1`$, we have 0% of $`A`$ and 100% of $`B`$. This is a linear interpolation between those two values!
 
@@ -95,7 +96,8 @@ The bilinear interpolation works as follows:
 3. Finally, we interpolate between $`Xb`$ and $`Xt`$, with input paramter $`v`$, to get the final color $`I`$.
 
  <!-- <img src="./pics/cameras.png" width="650"> -->
- ![Bilinear interpolation example.](./pics/bilinear.png)
+
+![Bilinear interpolation example.](./pics/bilinear.png)
 
 ## Part 3: the `Background` class
 
@@ -132,3 +134,40 @@ class BackgroundColor {
     RGBColor sampleUV( real_type u, real_type v ) const;
 };
 ```
+
+## Part 4: running the project
+
+```bash
+  # Clone this repository
+  $ git clone https://github.com/ThiagoCordeiro52/GC-Proj-00-PPM.git
+
+  # Access the project folder in terminal/cmd
+  $ cd GC-Proj-00-PPM
+
+  # Access the src folder in terminal/cmd
+  $ cd src
+
+  # Compile the source code
+  $ g++ main.cpp -o main
+
+  # Generate the image from program execution
+  $ ./main  > result.ppm
+
+  # Open the image with an image viewer
+  $ gimp result.ppm
+```
+
+### :boy: **Author**
+
+<div align="center">
+<a href="https://github.com/ThiagoCordeiro52">
+ <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/59898828?s=400&u=5fe84d654a8162d448d5743f9e8eb3506f20102c&v=4" width="100px;" alt="Foto de Perfil Thiago Oliveira"/>
+ <br />
+ <sub><b>Thiago Oliveira</b></sub></a>
+
+Done with ❤️ by Thiago Oliveira 👋🏽 Contact me!
+
+[![Linkedin Badge](https://img.shields.io/badge/-Thiago_Oliveira-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/thiago-de-oliveira-cordeiro-32562b1b6/)](https://www.linkedin.com/in/thiago-de-oliveira-cordeiro-32562b1b6/)
+[![Github Badge](https://img.shields.io/badge/-Thiago_Oliveira-000?style=flat-square&logo=Github&logoColor=white&link=https://github.com/ThiagoCordeiro52)](https://github.com/ThiagoCordeiro52)
+
+</div>
