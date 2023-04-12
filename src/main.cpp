@@ -16,7 +16,7 @@ RGBColor lerp(const RGBColor &A, const RGBColor &B, float t) {
   RGBColor color {
      (1 - t) * A.r + t * B.r,
      (1 - t) * A.g + t * B.g,
-     0.2 * A.b + 0.2 * B.b,
+     (1 - t) * A.b + t * B.b,
   };
   return color;
 }
